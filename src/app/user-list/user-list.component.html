@@ -1,0 +1,13 @@
+@if(userList$ | async; as userList) {
+<label>
+  Введите имя персонажа:
+  <input type="text" [formControl]="searchControl" />
+</label>
+@for ( user of userList; track user.id) {
+<p>
+  <a [routerLink]="['/user', user.id]">Id персонажа</a> {{ user.name }}
+  {{ user.lastName }}
+</p>
+} } @else {
+<p>Загрузка списка персонажей...</p>
+}

@@ -1,0 +1,19 @@
+@if (user$ | async; as user) {
+<article>
+  <h2>{{ user?.name }} {{ user?.lastName }}</h2>
+  <img
+    [src]="user?.img"
+    alt="Фото персонажа: {{ user?.name }} {{ user?.lastName }}"
+  />
+  <p><strong>Описание персонажа:</strong> {{ user?.description }}</p>
+  <p>
+    Является заключенным?
+    <span [ngClass]="user?.prisoner ? 'prisoner-yes' : 'prisoner-no'">
+      {{ user?.prisoner ? "Да" : "Нет" }}
+    </span>
+  </p>
+  <button (click)="goBack()">Вернуться назад</button>
+</article>
+} @else {
+<p>Загрузка данных о персонаже...</p>
+}
