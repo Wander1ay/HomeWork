@@ -70,4 +70,12 @@ export const MOCK_USERS: UserDescription[] = [
     description: 'Специальный агент службы охраны президента.',
     img: '/assets/users/Kellerman.jpg',
   },
+  {
+    id: 9,
+    name: 'Джон',
+    lastName: 'Абруцци',
+    prisoner: true,
+    description: 'Заключённый тюрьмы «Фокс Ривер», один из членов фокс-риверской восьмёрки.',
+    img: '/assets/users/abruzzi.jpg',
+  },
 ];
