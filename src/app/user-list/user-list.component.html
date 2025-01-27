@@ -8,6 +8,8 @@
   <a [routerLink]="['/user', user.id]">ID персонажа</a> {{ user.name }}
   {{ user.lastName }}
 </p>
+} @empty {
+    <p>Пользователь не найден</p>
 } } @else {
 <p>Загрузка списка персонажей...</p>
 }
