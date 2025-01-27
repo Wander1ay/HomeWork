@@ -5,7 +5,7 @@
 </label>
 @for ( user of userList; track user.id) {
 <p>
-  <a [routerLink]="['/user', user.id]">Id персонажа</a> {{ user.name }}
+  <a [routerLink]="['/user', user.id]">ID персонажа</a> {{ user.name }}
   {{ user.lastName }}
 </p>
 } } @else {
